@@ -5,7 +5,7 @@ const apiRouter = require('./router');
 const cors = require('cors');
 const { errorHandler } = require('./utils');
 const path = require("path");
-const filesPath = path.resolve(__dirname, "../build/");
+const filesPath = path.resolve(__dirname, "./build/");
 
 dbConnector()
   .then(() => {
