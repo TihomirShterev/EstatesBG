@@ -4,6 +4,8 @@ const dbConnector = require('./config/db');
 const apiRouter = require('./router');
 const cors = require('cors');
 const { errorHandler } = require('./utils');
+const path = require("path");
+const filesPath = path.resolve(__dirname, "../build/");
 
 dbConnector()
   .then(() => {
@@ -20,6 +22,9 @@ dbConnector()
     app.use(cors(config.cors));
 
     app.use('/api', apiRouter);
+
+    console.log(filesPath);
+    app.all("*", (req, res) => res.sendFile(`${filesPath}/index.html`));
 
     app.use(errorHandler);
 
