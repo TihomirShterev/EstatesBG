@@ -6,5 +6,5 @@ const path = require("path");
 router.use("/users", users);
 router.use("/items", items);
 router.all("*", (req, res) => res.sendFile(path + "../build/index.html"));
-// 
+
 module.exports = router;

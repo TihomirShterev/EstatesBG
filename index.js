@@ -12,11 +12,12 @@ dbConnector()
     const app = require('express')();
     require('./config/express')(app);
 
-    app.use(cors({
-      // origin: config.origin,
-      // credentials: true,
-      exposedHeaders: 'Authorization'
-    }));
+    // app.use(cors({
+    //   // credentials: true,
+    //   // heroku url
+    // }));
+
+    app.use(cors(config.cors));
 
     app.use('/api', apiRouter);
 
