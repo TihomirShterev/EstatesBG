@@ -9,9 +9,8 @@ const config = {
     cors: {
       exposedHeaders: 'Authorization',
       origin: ['http://localhost:3000', 'http://localhost:4200', 'https://estatesbg.herokuapp.com/'],
-      credetials: true
+      credentials: true
     }
-    // origin: ['http://localhost:3000', 'http://localhost:4200']
   },
   production: {
     port: process.env.PORT || 3001,

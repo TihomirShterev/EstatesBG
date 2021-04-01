@@ -4,7 +4,7 @@ const dbConnector = require('./config/db');
 const apiRouter = require('./router');
 const cors = require('cors');
 const { errorHandler } = require('./utils');
-const path = require("path");
+const path = require('path');
 const express = require('express');
 
 dbConnector()
@@ -13,11 +13,6 @@ dbConnector()
 
     const app = require('express')();
     require('./config/express')(app);
-
-    // app.use(cors({
-    //   // credentials: true,
-    //   // heroku url
-    // }));
 
     app.use(cors(config.cors));
 
