@@ -3,8 +3,8 @@ const env = process.env.NODE_ENV || 'development';
 const config = {
   development: {
     port: process.env.PORT || 3001,
-    // dbURL: 'mongodb://localhost:27017/ItemsDB-React',
-    dbURL: 'mongodb+srv://random:random@cluster0.gz36o.mongodb.net/ItemsDB-React',
+    dbURL: 'mongodb://localhost:27017/ItemsDB-React',
+    // dbURL: 'mongodb+srv://random:random@cluster0.gz36o.mongodb.net/ItemsDB-React',
     origin: ['http://localhost:3000', 'http://localhost:4200', 'https://estatesbg.herokuapp.com/'],
     cors: {
       exposedHeaders: 'Authorization',
